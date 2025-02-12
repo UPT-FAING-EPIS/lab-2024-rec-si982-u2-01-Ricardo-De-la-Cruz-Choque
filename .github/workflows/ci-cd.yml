@@ -31,7 +31,7 @@ jobs:
 
       - name: 'Build Inventory Image'
         run: |
-          docker build . --tag ghcr.io/ricardo-de-la-cruz-choque/shorten:${{github.sha}}
+          docker build src/ --tag ghcr.io/ricardo-de-la-cruz-choque/shorten:${{github.sha}}
           docker push ghcr.io/ricardo-de-la-cruz-choque/shorten:${{github.sha}}
 
   deploy:
